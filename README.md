@@ -1,136 +1,101 @@
-# Project Lyrics
+# Lyriks
 
-Develop an elegant React.js Music Application. 
+**Lyriks** is an innovative music discovery application developed using React and Vite, leveraging the Shazam API to offer an engaging and interactive music experience. With Lyriks, users can explore new music, view top charts, and learn more about their favorite artists seamlessly.
 
-Check out the complete project requirements [here](https://docs.google.com/document/d/13PeFwRlPEhMw_HPyrIrInvQuKaVWnpNmcv-y3NA208s/edit?usp=sharing)
+## Table of Contents
 
-# Contributing
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [License](#license)
 
-When contributing to this repository, please first discuss the change you wish to make via issue.
-Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+## Features
 
+- **Discover Music**  
+  Explore and filter music by genres on the main page. Find new tracks and artists that match your taste.
 
-## System Requirements
+- **Around You**  
+  Discover top-charted music based on your current location. See what’s trending in your area.
 
-To get started with development, you need to install few tools
+- **Top Charts**  
+  View the latest music charts, featuring trending songs and albums from various genres.
 
-1. git 
-   
-   `git` version 2.13.1 or higher. Download [git](https://git-scm.com/downloads) if you don't have it already.
+- **Top Artists**  
+  Browse popular artists and check out their top tracks and albums.
 
-   To check your version of git, run:
+- **Search Functionality**  
+  Search for music by artist name. Get detailed results and discover new tracks.
 
-   ```shell
-    git --version
-   ```
+- **Song Details**  
+  Click on any song to preview it. Access additional information and related tracks.
 
-2. node 
-   
-   `node` version 16.15.1 or higher. Download [node](https://nodejs.org/en/download/) if you don't have it already.
+- **Artist Details**  
+  View detailed artist profiles, including bios and links for more information.
 
-   To check your version of node, run:
+## Installation
 
-   ```shell
-    node --version
-   ```
+To set up and run Lyriks on your local machine, follow these steps:
 
-3. npm
+1. **Clone the Repository**
+
   
-   `npm` version 5.6.1 or higher. You will have it after you install node.
+   git clone https://github.com/yourusername/lyriks.git
+Navigate to the Project Directory
 
-   To check your version of npm, run:
+2. **Navigate to the Project Directory**
+cd lyriks
 
-   ```shell
-    npm --version
-   ```
+3. **Install Dependencies**
+npm install
 
-## Setup
+4. **Start the Development Server**
+npm run dev
 
-To set up a development environment, please follow these steps:
+## Usage
 
-1. Clone the repo
+**Discover Music**
+Go to the Discover Music page to explore new tracks.
+Use the genre filters to find music that suits your preferences.
 
-   ```shell
-    git clone https://github.com/JavaScript-Mastery-PRO/project1_team4_repository.git
-   ```
+**Around You**
+Access the Around You page to view top music based on your geographical location.
+Enable location services to get accurate results.
 
-2. Change directory to the project directory
+**Top Charts**
+Visit the Top Charts page to see the latest trending music.
+Explore various charts to find popular songs and albums.
 
-    ```shell
-    cd project1_team4_repository
-    ```
+**Top Artists**
+Navigate to the Top Artists section to discover popular artists.
+Click on artist names to view their top tracks and albums.
 
-3. Install the dependencies
-   
-    ```shell
-     npm install
-    ```
+**Search for Music**
+Use the search bar to find music by artist name.
+View search results and explore new tracks based on your query.
 
-    If you get an error, please check the console for more information.
+**Song Details**
+Click on a song to preview it.
+Access additional details such as related tracks and more information.
 
-    If you don't get an error, you are ready to start development.
+**Artist Details**
+Click on an artist to view their bio and other details.
+Find links for more information about the artist.
 
-4. Run the app
-   
-    ```shell
-    npm run dev
-    ```
-
-    Project will be running in the browser.
-
-    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-## Issues
-
-You've found a bug in the source code, a mistake in the documentation or maybe you'd like a new feature? You can help us by [submitting an issue on GitHub](https://github.com/orgs/JavaScript-Mastery-PRO/projects/8). Before you create an issue, make sure to search the issue archive -- your issue may have already been addressed!
-
-Please try to create bug reports that are:
-
-- _Reproducible._ Include steps to reproduce the problem.
-- _Specific._ Include as much detail as possible: which version, what environment, etc.
-- _Unique._ Do not duplicate existing opened issues.
-- _Scoped to a Single Bug._ One bug per report.
-
-
-## Pull Request
-
-There are 2 main work flows when dealing with pull requests:
-
-* Pull Request from a [forked repository](https://help.github.com/articles/fork-a-repo)
-* Pull Request from a branch within a repository
-
-Here we are going to focus on 2. Creating a Topical Branch:
+## Screenshots
+Here are some screenshots showcasing the features of Lyriks:
+![Discovewr Page](screenshots/discoverPage.png)
+![Around You Page](screenshots/aroundYou.png)
+![Top Artists Page](screenshots/topArtists.png)
+![Top Charts Page](screenshots/topCharts.png)
+![Top Charts Top Artists](screenshots/topChartsTopArtists.png)
+![Search](screenshots/search.png)
+![Song details](screenshots/sondetails.png)
+![Genres](screenshots/genres.png)
+![Discover by Genre](screenshots/discoverByGenre.png)
+![Related Songs](screenshots/relatedSongs.png)
+![Arist details](screenshots/artistDetails.png)
+![Music Player](screenshots/musicPlayer.png)
 
 
-1. First, we will need to create a branch from the latest commit on master. Make sure your repository is up to date first using
-
-   ```bash
-    git pull origin main
-   ```
-
-   *Note:* `git pull` does a `git fetch` followed by a `git merge` to update the local repo with the remote repo. For a more detailed explanation, see [this stackoverflow post](http://stackoverflow.com/questions/292357/whats-the-difference-between-git-pull-and-git-fetch).
-
-2. To create a branch, use `git checkout -b <new-branch-name> [<base-branch-name>]`, where `base-branch-name` is optional and defaults to `main`. 
-   
-   Use a standard convention for branch names. For example, `<your-name>-dev`. It will be easier to track your pull requests if you use this convention.
-   
-   I'm going to create a new branch called `jsm-dev` from the `main` branch and push it to github.
-
-   ```bash
-    git checkout -b jsm-dev main
-    git push origin jsm-dev
-   ```
-
-3. To create a pull request, you must have changes committed to your new branch.
-
-4. Go to [Pull Requests](https://github.com/JavaScript-Mastery-PRO/project1_team4_repository/pulls) and click on the `New Pull Request` button.
-
-5. Select the `main` branch as the `base` branch and the `jsm-dev` branch as the `compare` branch.
-
-6. Follow the template and fill in the proper information for the pull request.
-
-7. Click on the `Submit` button.
-
-8. You have successfully created a pull request. Now wait for mentor approval. Once approved, you can merge the pull request.
-
-#
+This project was initially developed following a YouTube tutorial by JS Mastery. It involved extensive modifications to adapt to updates in the Shazam API, demonstrating my ability to troubleshoot and enhance solutions beyond the original scope.
