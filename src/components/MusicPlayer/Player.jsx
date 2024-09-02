@@ -2,30 +2,40 @@
 import React, { useRef, useEffect } from 'react';
 
 const Player = ({ activeSong, isPlaying, volume, seekTime, onEnded, onTimeUpdate, onLoadedData, repeat }) => {
-
-
   const ref = useRef(null);
-  // eslint-disable-next-line no-unused-expressions
-  if (ref.current) {
-    if (isPlaying) {
-      ref.current.play();
-    } else {
-      ref.current.pause();
+  // Handle play/pause based on isPlaying prop
+  useEffect(() => {
+    if (ref.current) {
+      if (isPlaying) {
+        ref.current.play();
+      } else {
+        ref.current.pause();
+      }
     }
-  }
+  }, [isPlaying]);
 
+  // Update volume based on volume prop
   useEffect(() => {
-    ref.current.volume = volume;
+    if (ref.current) {
+      ref.current.volume = volume;
+    }
   }, [volume]);
-  // updates audio element only on seekTime change (and not on each rerender):
+
+  // Update current time based on seekTime prop
   useEffect(() => {
-    ref.current.currentTime = seekTime;
+    if (ref.current) {
+      ref.current.currentTime = seekTime;
+    }
   }, [seekTime]);
+
+  // Extract preview URL from the song's attributes and fallback URL from actions
+  const previewUrl = activeSong?.attributes?.previews[0]?.url;
+  const fallbackUrl = activeSong?.hub?.actions?.actions?.uri;
 
   return (
     <audio
-    src={activeSong?.attributes?.previews[0]?.url} // Use preview URL for audio playback
-    ref={ref}
+      src={previewUrl || fallbackUrl} // Use preview URL or fallback URL for audio playback
+      ref={ref}
       loop={repeat}
       onEnded={onEnded}
       onTimeUpdate={onTimeUpdate}
